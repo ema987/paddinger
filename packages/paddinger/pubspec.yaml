@@ -1,7 +1,7 @@
 name: paddinger
 description: >
   Code generation for Flutter Padding widgets based on your constants.
-version: 0.1.0
+version: 0.1.1
 repository: https://github.com/ema987/paddinger
 
 environment:
@@ -12,7 +12,7 @@ dependencies:
   build: ^2.0.0
   source_gen: ^1.0.0
   recase: ^4.0.0
-  paddinger_annotations: ^0.1.0
+  paddinger_annotations: ^0.1.1
 
 dev_dependencies:
   test: 1.16.8

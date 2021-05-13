@@ -1,1 +1,1 @@
-const String PADDING_CONST_PREFIX = "PADDING_";
+const String PADDING_CONST_PREFIX = 'PADDING_';

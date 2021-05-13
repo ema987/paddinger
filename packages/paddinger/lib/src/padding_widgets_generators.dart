@@ -50,8 +50,8 @@ String _addOnlyPaddings(String paddingName, String constantName) {
   final onlyPaddingKeys = PaddingDirection.values
       .map((paddingDirection) => paddingDirection.asPascalCase);
   final onlyPaddingWidgets = onlyPaddingKeys.map((paddingKey) => '''
-class ${paddingName}${paddingKey}Padding extends Padding {
-    const ${paddingName}${paddingKey}Padding({Key? key, required Widget child})
+class $paddingName${paddingKey}Padding extends Padding {
+    const $paddingName${paddingKey}Padding({Key? key, required Widget child})
       : super(
             key: key,
             padding: const EdgeInsets.only(${paddingKey.toLowerCase()}: $constantName),
@@ -92,8 +92,8 @@ String _addMissingCombinationPaddings(String paddingName, String constantName) {
   ];
   final missingCombinationPaddingWidgets =
       missingCombinationPaddingKeys.map((paddingKey) => '''
-class ${paddingName}${paddingKey.horizontalAsPascalCase}${paddingKey.verticalAsPascalCase}Padding extends Padding {
-    const ${paddingName}${paddingKey.horizontalAsPascalCase}${paddingKey.verticalAsPascalCase}Padding({Key? key, required Widget child})
+class $paddingName${paddingKey.horizontalAsPascalCase}${paddingKey.verticalAsPascalCase}Padding extends Padding {
+    const $paddingName${paddingKey.horizontalAsPascalCase}${paddingKey.verticalAsPascalCase}Padding({Key? key, required Widget child})
       : super(
             key: key,
             padding: const EdgeInsets.only(${paddingKey.horizontalAsCamelCase}: $constantName, ${paddingKey.verticalAsCamelCase}: $constantName),

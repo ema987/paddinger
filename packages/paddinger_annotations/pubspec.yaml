@@ -2,7 +2,7 @@ name: paddinger_annotations
 description: >
   Annotations for the paddinger Flutter code-generator.
   This package does nothing without paddinger too.
-version: 0.1.0
+version: 0.1.1
 repository: https://github.com/ema987/paddinger
 
 environment:

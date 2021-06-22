@@ -1,14 +1,14 @@
-import 'package:paddinger/src/padding_widgets_generators.dart';
+import 'package:paddinger/src/padding_widgets_generator.dart';
 import 'package:test/test.dart';
 
 void main() {
   test(
-      'GIVEN a valid paddingName and a valid constantName, WHEN generatePaddingWidgets(), THEN valid padding widgets are generated',
+      'GIVEN a valid paddingName and a valid constantName, WHEN generate(), THEN valid padding widgets are generated',
       () {
-    expect(generatePaddingWidgets("Normal", "PADDING_NORMAL"), '''
+    expect(PaddingWidgetsGenerator().generate("Normal", "PADDING_NORMAL"), '''
   
   // **************************************************************************
-// START Normal
+// START Normal Widgets
 // **************************************************************************
 
   
@@ -99,7 +99,7 @@ class NormalVerticalPadding extends Padding {
   
 
   // **************************************************************************
-// END Normal
+// END Normal Widgets
 // **************************************************************************
 
 

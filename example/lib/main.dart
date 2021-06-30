@@ -66,21 +66,24 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title!),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          NormalAllPadding(
-            child: Text(
-              'This is a very very very long text and you have pushed the button this many times:',
+      body: Container(
+        padding: EXTREME_ALL_EDGE_INSETS,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            NormalAllPadding(
+              child: Text(
+                'This is a very very very long text and you have pushed the button this many times:',
+              ),
             ),
-          ),
-          ExtremeVerticalPadding(
-            child: Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ),
-        ],
+            ExtremeVerticalPadding(
+              child: Text(
+                '$_counter',
+                style: Theme.of(context).textTheme.headline4,
+              ),
+            )
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,

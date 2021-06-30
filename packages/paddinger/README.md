@@ -46,6 +46,42 @@ NormalAllPadding(
 )
 ```
 
+Furthermore, a set of EdgeInsets constants will be generated like:
+
+```
+NORMAL_ALL_EDGE_INSETS
+NORMAL_LEFT_EDGE_INSETS
+NORMAL_TOP_EDGE_INSETS
+NORMAL_RIGHT_EDGE_INSETS
+NORMAL_BOTTOM_EDGE_INSETS
+NORMAL_HORIZONTAL_EDGE_INSETS
+NORMAL_VERTICAL_EDGE_INSETS
+NORMAL_LEFT_TOP_EDGE_INSETS
+NORMAL_LEFT_BOTTOM_EDGE_INSETS
+NORMAL_RIGHT_TOP_EDGE_INSETS
+NORMAL_RIGHT_BOTTOM_EDGE_INSETS
+```
+
+So instead of writing:
+
+```dart
+Container(
+    padding: EdgeInsets.all(PADDING_EXTREME),
+    child: Text(
+      'MyText',
+))
+```
+
+you can just write:
+
+```dart
+Container(
+    padding: EXTREME_ALL_EDGE_INSETS,
+    child: Text(
+      'MyText',
+))
+```
+
 ## How to use it
 
 - Add the following as dependencies:

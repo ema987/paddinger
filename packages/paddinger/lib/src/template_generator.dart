@@ -5,20 +5,13 @@ import 'package:paddinger/src/padding_direction_extensions.dart';
 abstract class TemplateGenerator {
   String generate(String paddingName, String constantName) {
     return '''
-  
-  ${_addStartComment(paddingName)}
-  
-  ${addAll(paddingName, constantName)}
-  
-  ${addOnly(paddingName, constantName)}
-  
-  ${addSymmetric(paddingName, constantName)}
-  
-  ${addMissingCombination(paddingName, constantName)}
-
-  ${_addEndComment(paddingName)}
-
-    ''';
+${_addStartComment(paddingName)}
+${addAll(paddingName, constantName)}
+${addOnly(paddingName, constantName)}
+${addSymmetric(paddingName, constantName)}
+${addMissingCombination(paddingName, constantName)}
+${_addEndComment(paddingName)}
+''';
   }
 
   String _addStartComment(String paddingName) {

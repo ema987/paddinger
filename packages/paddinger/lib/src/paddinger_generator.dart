@@ -22,16 +22,11 @@ class PaddingerGenerator extends GeneratorForAnnotation<Paddinger> {
   String generatePaddingWidgetsAndEdgeInsets(
       String paddingName, String constantName) {
     return '''
-
-  ${_addStartComment(paddingName)}
-  
-  ${EdgeInsetsTemplateGenerator().generate(paddingName, constantName)}
-
-  ${PaddingWidgetsGenerator().generate(paddingName, constantName)}
-
-  ${_addEndComment(paddingName)}
-
-    ''';
+${_addStartComment(paddingName)}
+${EdgeInsetsTemplateGenerator().generate(paddingName, constantName)}
+${PaddingWidgetsGenerator().generate(paddingName, constantName)}
+${_addEndComment(paddingName)}
+''';
   }
 
   String _addStartComment(String paddingName) {

@@ -10,7 +10,9 @@ class EdgeInsetsTemplateGenerator extends TemplateGenerator {
 
   @override
   String addAll(String paddingName, String constantName) {
-    return '''const ${paddingName.toUpperCase()}_ALL_EDGE_INSETS = EdgeInsets.all($constantName);''';
+    return '''
+const ${paddingName.toUpperCase()}_ALL_EDGE_INSETS = EdgeInsets.all($constantName);
+''';
   }
 
   @override
@@ -18,7 +20,7 @@ class EdgeInsetsTemplateGenerator extends TemplateGenerator {
       String paddingName, String paddingKey, String constantName) {
     return '''
 const ${paddingName.toUpperCase()}_${paddingKey.toUpperCase()}_EDGE_INSETS = EdgeInsets.only(${paddingKey.toLowerCase()}: $constantName);
-  ''';
+''';
   }
 
   @override
@@ -26,7 +28,7 @@ const ${paddingName.toUpperCase()}_${paddingKey.toUpperCase()}_EDGE_INSETS = Edg
     return '''
 const ${paddingName.toUpperCase()}_HORIZONTAL_EDGE_INSETS = EdgeInsets.symmetric(horizontal: $constantName);
 const ${paddingName.toUpperCase()}_VERTICAL_EDGE_INSETS = EdgeInsets.symmetric(vertical: $constantName);
-  ''';
+''';
   }
 
   @override
@@ -34,6 +36,6 @@ const ${paddingName.toUpperCase()}_VERTICAL_EDGE_INSETS = EdgeInsets.symmetric(v
       MissingPaddingCombinationKey paddingKey, String constantName) {
     return '''
 const ${paddingName.toUpperCase()}_${paddingKey.horizontalAsUpperCase}_${paddingKey.verticalAsUpperCase}_EDGE_INSETS = const EdgeInsets.only(${paddingKey.horizontalAsCamelCase}: $constantName, ${paddingKey.verticalAsCamelCase}: $constantName);
-   ''';
+''';
   }
 }

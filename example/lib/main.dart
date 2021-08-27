@@ -67,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title!),
       ),
       body: Container(
-        padding: EXTREME_ALL_EDGE_INSETS,
+        padding: EXTREME_ALL_PADDING,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[

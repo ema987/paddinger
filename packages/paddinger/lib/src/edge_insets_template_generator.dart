@@ -11,7 +11,7 @@ class EdgeInsetsTemplateGenerator extends TemplateGenerator {
   @override
   String addAll(String paddingName, String constantName) {
     return '''
-const ${paddingName.toUpperCase()}_ALL_EDGE_INSETS = EdgeInsets.all($constantName);
+const ${paddingName.toUpperCase()}_ALL_PADDING = EdgeInsets.all($constantName);
 ''';
   }
 
@@ -19,15 +19,15 @@ const ${paddingName.toUpperCase()}_ALL_EDGE_INSETS = EdgeInsets.all($constantNam
   String generateOnly(
       String paddingName, String paddingKey, String constantName) {
     return '''
-const ${paddingName.toUpperCase()}_${paddingKey.toUpperCase()}_EDGE_INSETS = EdgeInsets.only(${paddingKey.toLowerCase()}: $constantName);
+const ${paddingName.toUpperCase()}_${paddingKey.toUpperCase()}_PADDING = EdgeInsets.only(${paddingKey.toLowerCase()}: $constantName);
 ''';
   }
 
   @override
   String addSymmetric(String paddingName, String constantName) {
     return '''
-const ${paddingName.toUpperCase()}_HORIZONTAL_EDGE_INSETS = EdgeInsets.symmetric(horizontal: $constantName);
-const ${paddingName.toUpperCase()}_VERTICAL_EDGE_INSETS = EdgeInsets.symmetric(vertical: $constantName);
+const ${paddingName.toUpperCase()}_HORIZONTAL_PADDING = EdgeInsets.symmetric(horizontal: $constantName);
+const ${paddingName.toUpperCase()}_VERTICAL_PADDING = EdgeInsets.symmetric(vertical: $constantName);
 ''';
   }
 
@@ -35,7 +35,7 @@ const ${paddingName.toUpperCase()}_VERTICAL_EDGE_INSETS = EdgeInsets.symmetric(v
   String generateMissingCombination(String paddingName,
       MissingPaddingCombinationKey paddingKey, String constantName) {
     return '''
-const ${paddingName.toUpperCase()}_${paddingKey.horizontalAsUpperCase}_${paddingKey.verticalAsUpperCase}_EDGE_INSETS = const EdgeInsets.only(${paddingKey.horizontalAsCamelCase}: $constantName, ${paddingKey.verticalAsCamelCase}: $constantName);
+const ${paddingName.toUpperCase()}_${paddingKey.horizontalAsUpperCase}_${paddingKey.verticalAsUpperCase}_PADDING = const EdgeInsets.only(${paddingKey.horizontalAsCamelCase}: $constantName, ${paddingKey.verticalAsCamelCase}: $constantName);
 ''';
   }
 }

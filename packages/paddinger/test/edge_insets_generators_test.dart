@@ -11,20 +11,20 @@ void main() {
 // START Normal EdgeInsets
 // **************************************************************************
 
-const NORMAL_ALL_EDGE_INSETS = EdgeInsets.all(PADDING_NORMAL);
+const NORMAL_ALL_PADDING = EdgeInsets.all(PADDING_NORMAL);
 
-const NORMAL_LEFT_EDGE_INSETS = EdgeInsets.only(left: PADDING_NORMAL);
-const NORMAL_TOP_EDGE_INSETS = EdgeInsets.only(top: PADDING_NORMAL);
-const NORMAL_RIGHT_EDGE_INSETS = EdgeInsets.only(right: PADDING_NORMAL);
-const NORMAL_BOTTOM_EDGE_INSETS = EdgeInsets.only(bottom: PADDING_NORMAL);
+const NORMAL_LEFT_PADDING = EdgeInsets.only(left: PADDING_NORMAL);
+const NORMAL_TOP_PADDING = EdgeInsets.only(top: PADDING_NORMAL);
+const NORMAL_RIGHT_PADDING = EdgeInsets.only(right: PADDING_NORMAL);
+const NORMAL_BOTTOM_PADDING = EdgeInsets.only(bottom: PADDING_NORMAL);
 
-const NORMAL_HORIZONTAL_EDGE_INSETS = EdgeInsets.symmetric(horizontal: PADDING_NORMAL);
-const NORMAL_VERTICAL_EDGE_INSETS = EdgeInsets.symmetric(vertical: PADDING_NORMAL);
+const NORMAL_HORIZONTAL_PADDING = EdgeInsets.symmetric(horizontal: PADDING_NORMAL);
+const NORMAL_VERTICAL_PADDING = EdgeInsets.symmetric(vertical: PADDING_NORMAL);
 
-const NORMAL_LEFT_TOP_EDGE_INSETS = const EdgeInsets.only(left: PADDING_NORMAL, top: PADDING_NORMAL);
-const NORMAL_LEFT_BOTTOM_EDGE_INSETS = const EdgeInsets.only(left: PADDING_NORMAL, bottom: PADDING_NORMAL);
-const NORMAL_RIGHT_TOP_EDGE_INSETS = const EdgeInsets.only(right: PADDING_NORMAL, top: PADDING_NORMAL);
-const NORMAL_RIGHT_BOTTOM_EDGE_INSETS = const EdgeInsets.only(right: PADDING_NORMAL, bottom: PADDING_NORMAL);
+const NORMAL_LEFT_TOP_PADDING = const EdgeInsets.only(left: PADDING_NORMAL, top: PADDING_NORMAL);
+const NORMAL_LEFT_BOTTOM_PADDING = const EdgeInsets.only(left: PADDING_NORMAL, bottom: PADDING_NORMAL);
+const NORMAL_RIGHT_TOP_PADDING = const EdgeInsets.only(right: PADDING_NORMAL, top: PADDING_NORMAL);
+const NORMAL_RIGHT_BOTTOM_PADDING = const EdgeInsets.only(right: PADDING_NORMAL, bottom: PADDING_NORMAL);
 
 // **************************************************************************
 // END Normal EdgeInsets
